@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:singup_login/views/login.dart';
+import 'package:iconly/iconly.dart';
+import 'package:singup_login/views/medocs.dart';
 
 class singup extends StatefulWidget {
   const singup({super.key});
@@ -9,6 +11,8 @@ class singup extends StatefulWidget {
 }
 
 class _singupState extends State<singup> {
+  bool _isSecurePassword =true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +33,7 @@ class _singupState extends State<singup> {
                       ),
                     ),
                     SizedBox(height: 20,),
-                    Text("Crete new account", style: TextStyle(
+                    Text("Create new account", style: TextStyle(
                       color: Color(0xff004643),
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
@@ -99,11 +103,12 @@ class _singupState extends State<singup> {
                           ),
                         ),
                         child: TextField(
+                          obscureText: _isSecurePassword,
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "Enter your password",
-                              hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
-                              suffixIcon: Icon(Icons.remove_red_eye_rounded, size:30, color: Colors.grey,)
+                              hintStyle: TextStyle(color: Colors.grey, fontSize: 22),
+                              suffixIcon: togglePassword(),
                           ),
                         ),
                       ),
@@ -137,11 +142,12 @@ class _singupState extends State<singup> {
                           ),
                         ),
                         child: TextField(
+                          obscureText: _isSecurePassword,
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "Enter your password",
                               hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
-                              suffixIcon: Icon(Icons.remove_red_eye_rounded, size:30, color: Colors.grey,)
+                              suffixIcon: togglePassword(),
                           ),
                         ),
                       ),
@@ -200,19 +206,24 @@ class _singupState extends State<singup> {
                       ),
                     ),
                     SizedBox(height: 30,),
-                    Container(
-                      height: 55,
-                      width: 310,
-                      decoration: BoxDecoration(
-                        color: Color(0xff004643),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Center(
-                        child: (
-                            Text("Sign in", style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),)
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>medocs()));
+                      },
+                      child: Container(
+                        height: 55,
+                        width: 310,
+                        decoration: BoxDecoration(
+                          color: Color(0xff004643),
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                          child: (
+                              Text("Sign up", style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),)
+                          ),
                         ),
                       ),
                     ),
@@ -271,5 +282,13 @@ class _singupState extends State<singup> {
       ),
 
     );
+  }
+  Widget togglePassword(){
+    return IconButton(onPressed: (){
+      setState(() {
+        _isSecurePassword =! _isSecurePassword;
+      });
+    }, icon: _isSecurePassword ?  Icon(IconlyBold.hide) : Icon(IconlyBold.show),
+    color: Colors.grey,);
   }
 }

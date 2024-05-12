@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:singup_login/views/singup.dart';
+import 'package:iconly/iconly.dart';
+import 'package:singup_login/views/medocs.dart';
+
 
 class loginpage extends StatefulWidget {
   const loginpage({Key? key}) : super(key: key);
@@ -11,6 +14,7 @@ class loginpage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<loginpage> {
+  bool _isSecurePassword =true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +78,7 @@ class _LoginPageState extends State<loginpage> {
           ),
         
           SizedBox(height: 13,),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
@@ -101,11 +106,12 @@ class _LoginPageState extends State<loginpage> {
                 ),
               ),
               child: TextField(
+                obscureText: _isSecurePassword,
                 decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Enter your password",
                     hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
-                    suffixIcon: Icon(Icons.remove_red_eye_rounded, size:30, color: Colors.grey,)
+                    suffixIcon: togglePassword(),
                 ),
               ),
             ),
@@ -177,19 +183,24 @@ class _LoginPageState extends State<loginpage> {
             ),
           ),
               SizedBox(height: 30,),
-              Container(
-                height: 55,
-                width: 310,
-                decoration: BoxDecoration(
-                  color: Color(0xff004643),
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                child: Center(
-                  child: (
-                  Text("Sign in", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),)
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>medocs()));
+                },
+                child: Container(
+                  height: 55,
+                  width: 310,
+                  decoration: BoxDecoration(
+                    color: Color(0xff004643),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Center(
+                    child: (
+                    Text("Sign in", style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),)
+                    ),
                   ),
                 ),
               ),
@@ -220,6 +231,7 @@ class _LoginPageState extends State<loginpage> {
                     ),
                   ),
               ],),
+
               SizedBox(height: 30,),
         
               Row(
@@ -249,5 +261,13 @@ class _LoginPageState extends State<loginpage> {
       ),
 
     );
+  }
+  Widget togglePassword(){
+    return IconButton(onPressed: (){
+      setState(() {
+        _isSecurePassword =! _isSecurePassword;
+      });
+    }, icon: _isSecurePassword ?  Icon(IconlyBold.hide) : Icon(IconlyBold.show),
+      color: Colors.grey,);
   }
 }
