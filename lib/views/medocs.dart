@@ -226,37 +226,194 @@ class _medocsState extends State<medocs> {
                 ),
               ),
                 SizedBox(height: 2,),
-              Container(
-                height: 300,
-                width: 350,
-                decoration: BoxDecoration(
-                  color: Colors.white
-                ),
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    RelatedArticle(
-                        Minreadtext: "6 min read",
-                        MinreadtStyle: TextStyle(
-                            color: Color(0xff1A998E)
-                        ),
-                        Datetext: "Jun 12, 2021",
-                        DatetextStyle: TextStyle(
-                          color: Colors.grey, fontSize: 12,
-                        ) ,
-                        Ctext: "Covid-19",
-                        CtextStyle: TextStyle(
-                            color: Color(0xff1A998E),
-                            fontSize: 12
-                        ),
-                        text: "Comparing the AstraZeneca and \nSinovac COVID-19 Vancines", textStyle: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ), image: "assets/image/jell.jpg"),
-                  ],
-                ),
-              )
+              SizedBox(height: 500,
+              width: 350,
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: [
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 10, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/piluleuuu.jpeg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 09, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "Traditional Herbal Medicine \nTreatments for COVID-19", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/boite.jpeg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "Beauty Tips For Face: 10 Dos and Don'ts for Naturally Beautiful Skin", textStyle: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/boitcom.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                  RelatedArticle(
+                      Minreadtext: "6 min read",
+                      MinreadtStyle: TextStyle(
+                          color: Color(0xff1A998E)
+                      ),
+                      Datetext: "Jun 12, 2021",
+                      DatetextStyle: TextStyle(
+                        color: Colors.grey, fontSize: 12,
+                      ) ,
+                      Ctext: "Covid-19",
+                      CtextStyle: TextStyle(
+                          color: Color(0xff1A998E),
+                          fontSize: 12
+                      ),
+                      text: "The 25 Healthiest Fruits You Can \nEat, According to a Nutritionist", textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ), image: "assets/image/jell.jpg"),
+                  SizedBox(height: 10,),
+                ],
+              ),
+              ),
 
             ],)
           ),
@@ -422,7 +579,7 @@ class RelatedArticle extends StatelessWidget {
               color: Colors.white,
               border: Border.all(
                 color: Colors.grey,
-                width: 0.5,
+                width: 0.1,
               )
           ),
           child: Row(
@@ -440,22 +597,38 @@ class RelatedArticle extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 10,),
-              Column(children: [
+              SizedBox(width: 7,),
+
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
                 SizedBox(width: 8,),
+                  SizedBox(height: 7,),
                 Container(
-                    height: 60,
+                    height: 45,
                     width: 200,
                     child: Text(this.text, style: textStyle,)),
-                Row(children: [
-                  SizedBox(width: 5,),
-                  Text(this.Datetext, style: DatetextStyle,),
-                  SizedBox(width: 3,),
-                  Icon(Icons.circle, size: 4,color: Colors.grey,),
-                  SizedBox(width: 3,),
-                  Text(this.Minreadtext, style: MinreadtStyle,)
-                ],)
+                Container(
+                  height: 20,
+                  width: 200,
+                  child: Row(
+                    children: [
+                    SizedBox(width: 2,),
+                    Text(this.Datetext, style: DatetextStyle,),
+                    SizedBox(width: 3,),
+                    Icon(Icons.circle, size: 4,color: Colors.grey,),
+                    SizedBox(width: 3,),
+                    Text(this.Minreadtext, style: MinreadtStyle,)
+                  ],),
+                ),
+
               ],),
+              SizedBox(width: 20,),
+              Column(
+                children: [
+                  SizedBox(height: 7,),
+                Icon(Icons.bookmark, color: Color(0xff179A8D))
+              ],)
 
             ],
           )
