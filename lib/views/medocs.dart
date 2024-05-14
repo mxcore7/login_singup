@@ -499,7 +499,16 @@ class TrendingArticle extends StatelessWidget {
                 width: 135,
                 decoration: BoxDecoration(
                   image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(15)
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Icon(Icons.bookmark, size: 15, color: Colors.white,)
+                  ],),
                 ),
               ),
               SizedBox(height: 10,),

@@ -12,6 +12,7 @@ class singup extends StatefulWidget {
 
 class _singupState extends State<singup> {
   bool _isSecurePassword =true;
+  bool isIconVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -164,6 +165,7 @@ class _singupState extends State<singup> {
                                 color: Color(0xffF4F4F4),
                                 borderRadius: BorderRadius.circular(50)
                             ),
+                            child: buildIconVisibility(),
                           ),
                           SizedBox(width: 7,),
                           Column(
@@ -291,4 +293,38 @@ class _singupState extends State<singup> {
     }, icon: _isSecurePassword ?  Icon(IconlyBold.hide) : Icon(IconlyBold.show),
     color: Colors.grey,);
   }
+
+  Widget buildIconVisibility() {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          // Inversez la visibilité de l'icône lorsque le conteneur est cliqué
+          isIconVisible = !isIconVisible;
+        });
+      },
+      child: Container(
+        height: 20,
+        width: 20,
+        decoration: BoxDecoration(
+          color: Color(0xffF4F4F4),
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Stack(
+          children: [
+            // Affichez l'icône uniquement si isIconVisible est vrai
+            if (isIconVisible)
+              Center(
+                child: Icon(
+                  Icons.check_circle_rounded,
+                  color: Colors.green,
+                  size: 17,
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
 }
